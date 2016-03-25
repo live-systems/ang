@@ -23,13 +23,34 @@
       <a href="https://github.com/live-systems/ang/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
-    <section class='app-area parent'>
-      <div class='app-box child'>
-        <h3>App Area</h3>
-        <input name='x' id='x' type=number step=any value=''>
-        <input name='y' id='y' type=number step=any value=''>
-        <output name='o'>{{45 + 99}}</output>
+    <section class='app-area main-content'>
+      <h3>App Area</h3>
+      <div class='app-box parent'>
+        <div class='app child'>
+        <div class='calculator'>
+          <h4>Calculator</h4>
+          <output name='o'>Sum: {{ x -- y }}</output>
+          <div class='buttons'>
+          <input name='x' id='x' type=number step=any ng-model=x value=''>
+          <input name='y' id='y' type=number step=any ng-model=y value=''>
+        </div>
+
+        </div>
       </div>
+    </section>
+
+    <section class='demos main-content'>
+      <h3>
+        Demos
+      </h3>
+      <ul>
+        <li>Simple angular app (which is this site)</li>
+        <li>A full stack of Continuous Integration</li>
+        <li>Basic Python functional testing & unit testing with pytest</li>
+        <li>Angular.js, unit tested & functional tested</li>
+        <li>REST API with EVE or Flask</li>
+        <li>Travis CI instead of codeship</li>
+      </ul>
     </section>
 
     <section class="main-content">
