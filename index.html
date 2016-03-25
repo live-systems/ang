@@ -7,20 +7,34 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <!-- github pages chose this pathing, not my favorite -->
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <!-- Move to end of body later -->
   </head>
-  <body>
+  <body ng-app>
     <section class="page-header">
-      <h1 class="project-name">Ang</h1>
-      <h2 class="project-tagline">Pure angular js site prototypes.</h2>
+      <header>
+        <h1 class="project-name">Simple Angular js site</h1>
+        <h2 class="project-tagline">Pure angular js site prototypes.</h2>
+      </header>
       <a href="https://github.com/live-systems/ang" class="btn">View on GitHub</a>
       <a href="https://github.com/live-systems/ang/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/live-systems/ang/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
+    <section class='app-area parent'>
+      <div class='app-box child'>
+        <h3>App Area</h3>
+        <input name='x' id='x' type=number step=any value=''>
+        <input name='y' id='y' type=number step=any value=''>
+        <output name='o'>{{45 + 99}}</output>
+      </div>
+    </section>
+
     <section class="main-content">
-      <h3>
-<a id="lets-have-a-conversation-about-what-you-want-from-the-web" class="anchor" href="#lets-have-a-conversation-about-what-you-want-from-the-web" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Let's have a Conversation about what you want from the web</h3>
+      <h4>
+<a id="lets-have-a-conversation-about-what-you-want-from-the-web" class="anchor" href="#lets-have-a-conversation-about-what-you-want-from-the-web" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Let's have a Conversation about what you want from the web</h4>
 
 <p>Complex signup processes turn away customers. Slow loading pages cause users to leave quickly. Security breaches can cost days of downtime and massive liability. It's easy to lose users &amp; sales, but it takes knowledge to keep them. You need an experienced full-stack developer that can address usability, performance, security, and business value all at the same time. The expertise I bring ensures that your site works for your users, instead of being an obstacle.</p>
 
