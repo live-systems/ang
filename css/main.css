@@ -1,3 +1,7 @@
+v-accordian, v-pane, v-pane-header, v-pane-content{
+  display:block;
+}
+
 * {
   box-sizing: border-box; }
 
@@ -47,6 +51,8 @@ a {
 output{
   font-family:monospace;
 }
+
+
 
 @media screen and (min-width: 64em) {
   .btn {

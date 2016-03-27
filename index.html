@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>Ang by live-systems</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
     <!-- github pages chose this pathing, not my favorite -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <!-- Move to end of body later -->
+    <!-- TODO: Move to end of body later -->
+    <script src='./js/app.js'></script>
   </head>
   <body ng-app>
     <section class="page-header">
@@ -24,33 +25,72 @@
     </section>
 
     <section class='app-area main-content'>
-      <h3>App Area</h3>
-      <div class='app-box parent'>
-        <div class='app child'>
-        <div class='calculator'>
-          <h4>Calculator</h4>
-          <output name='o'>Sum: {{ x -- y }}</output>
-          <div class='buttons'>
-          <input name='x' id='x' type=number step=any ng-model=x value=''>
-          <input name='y' id='y' type=number step=any ng-model=y value=''>
-        </div>
+      <h3>Accordion of Angular Demos</h3>
+      <v-accordian>
+        <v-pane id='pane1'>
+          <v-pane-header ng-click="active=pane1">
+            <h4>Calculator</h4>
+          </v-pane-header>
+          <v-pane-content>
+            <div class='app-box parent'>
+              <div class='app child'>
+                <div class='calculator'>
+                  <output name='o'>Sum: {{ x + y }}</output>
+                  <div class='buttons'>
+                  <input name='x' id='x' type=number step=any ng-model=x value=''>
+                  <input name='y' id='y' type=number step=any ng-model=y value=''>
+                </div>
+              </div>
+            </div>
+          </v-pane-content>
+        </v-pane>
+        <v-pane id='pane2'>
+          <v-pane-header>
+          Another header
+          </v-pane-header>
+          <v-pane-content>
+          Another demo content area
+          </v-pane-content>
+        </v-pane>
+        <v-pane id='pane3'>
+          <v-pane-header>
+            More Header
+          </v-pane-header>
+          <v-pane-content>
+            More Content
+          </v-pane-content>
+        </v-pane>
+      </v-accordian>
+      <v-accordion id="dynamic-accordion" multiple control="accordion">
 
-        </div>
-      </div>
+        <v-pane id="{{ pane.id }}" ng-repeat="pane in panes">
+          <v-pane-header>
+            {{ ::pane.header }}
+          </v-pane-header>
+
+          <v-pane-content>
+            {{ ::pane.content }}
+          </v-pane-content>
+        </v-pane>
+
+      </v-accordion>
+      <button ng-click="accordion.toggle(0)">Toggle first pane</button>
+      <button ng-click="accordion.expandAll()">Expand all</button>
+      <button ng-click="accordion.collapseAll()">Collapse all</button>
     </section>
 
     <section class='demos main-content'>
       <h3>
         Demos
       </h3>
-      <ul>
-        <li>Simple angular app (which is this site)</li>
-        <li>A full stack of Continuous Integration</li>
-        <li>Basic Python functional testing & unit testing with pytest</li>
-        <li>Angular.js, unit tested & functional tested</li>
-        <li>REST API with EVE or Flask</li>
-        <li>Travis CI instead of codeship</li>
-      </ul>
+      <dl>
+        <dt>Simple angular app (which is this site)</dt><dd><a href='https://github.com/live-systems/ang/tree/gh-pages'>(source)</a></dd>
+        <dt>Angular.js, unit tested & functional tested, with python <a href='http://fractalish.local/'>(local dev)</a></dt><dd><a href='https://github.com/live-systems/fractalish'>(source)</a></dd>
+        <dt>Basic Django with functional testing & unit testing with pytest <a href='http://127.0.0.1:8000/'>(local dev)</a></dt><dd><a href='https://github.com/live-systems/dj'>(source)</a></dd>
+        <dt>REST API with EVE or Flask</dt><dd><a href='https://github.com/live-systems/ang/tree/gh-pages'><strike>(source)</strike></a></dd>
+        <dt>A full stack of Continuous Integration using Travis CI instead of codeship</dt><dd><a href='https://github.com/live-systems/ang/tree/gh-pages'><strike>(source)</strike></a></dd>
+        <dt>Full fledged PHP site with unit, integration, functional, and js CI testing <a href='http://www.ninjawars.net'>(ninjawars.net)</a></dt><dd><a href='https://github.com/BitLucid/ninjawars'>(source)</a></dd>
+      </dl>
     </section>
 
     <section class="main-content">
