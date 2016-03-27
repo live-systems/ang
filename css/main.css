@@ -124,7 +124,7 @@ output{
   .project-tagline {
     font-size: 1rem; } }
 
-.main-content:first-child {
+.main-content > :first-child {
   margin-top: 0; }
 .main-content img {
   max-width: 100%; }
