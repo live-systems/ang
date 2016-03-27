@@ -7,11 +7,28 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
-    <!-- github pages chose this pathing, not my favorite -->
+    <link rel="stylesheet" type="text/css" href="css/animations.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <!-- TODO: Move to end of body later -->
     <script src='./js/app.js'></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body ng-app>
     <section class="page-header">
@@ -26,10 +43,10 @@
 
     <section class='app-area main-content'>
       <h3>Accordion of Angular Demos</h3>
-      <v-accordian>
+      <v-accordion id="dynamic-accordion" multiple control="accordion">
         <v-pane id='pane1'>
           <v-pane-header ng-click="active=pane1">
-            <h4>Calculator</h4>
+            Calculator
           </v-pane-header>
           <v-pane-content>
             <div class='app-box parent'>
@@ -46,22 +63,23 @@
         </v-pane>
         <v-pane id='pane2'>
           <v-pane-header>
-          Another accordion header
+            Naive Password Strength Checker
           </v-pane-header>
           <v-pane-content>
-          Another Accordion demo content area
+            <input name='pzwd' id='pzwd' ng-model=pzwd value=''> <button>Check Password Strength</button>
+            <output name='pzwdstrength'>Weak</output>
           </v-pane-content>
         </v-pane>
         <v-pane id='pane3'>
           <v-pane-header>
-            More Accordion Headers
+            Another accordion header
           </v-pane-header>
           <v-pane-content>
-            More Accordion Content
+            Another Accordion demo content area
           </v-pane-content>
         </v-pane>
-      </v-accordian>
-      <v-accordion id="dynamic-accordion" multiple control="accordion">
+      </v-accordion>
+      <v-accordion id="dynamic-accordion2" multiple control="accordion2">
 
         <v-pane id="{{ pane.id }}" ng-repeat="pane in panes">
           <v-pane-header>

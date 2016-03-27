@@ -124,7 +124,7 @@ output{
   .project-tagline {
     font-size: 1rem; } }
 
-.main-content :first-child {
+.main-content:first-child {
   margin-top: 0; }
 .main-content img {
   max-width: 100%; }
@@ -132,9 +132,17 @@ output{
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #a80077; }
+  color: #a80077; 
+}
+v-pane-header {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  color: #a80077; 
+}
 .main-content .subtitle{
-    color:rgb(133, 93, 173);font-size:smaller;
+  color:rgb(133, 93, 173);
+  font-size:smaller;
 }
 .main-content .subtitle:before{
     content:"\a";
