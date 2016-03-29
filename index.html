@@ -71,14 +71,14 @@
         </v-pane>
         <v-pane id='pane3'>
           <v-pane-header>
-            Navigations Active [WIP]
+            Navigations Active
           </v-pane-header>
           <v-pane-content>
             <nav class="square {{active}}" ng-click="$event.preventDefault()">
               <a href="#" class="home" ng-class='active=="home"? "active" : ""' ng-click="active='home'">Home</a>
-              <a href="#" class="projects" ng-class='active=="projects"? "active" : ""'ng-click="active='projects'">Projects</a>
-              <a href="#" class="services" ng-class='active=="services"? "active" : ""'ng-click="active='services'">Services</a>
-              <a href="#" class="contact" ng-class='active=="contact"? "active" : ""'ng-click="active='contact'">Contact</a>
+              <a href="#" class="projects" ng-class='active=="projects"? "active" : ""' ng-click="active='projects'">Projects</a>
+              <a href="#" class="services" ng-class='active=="services"? "active" : ""' ng-click="active='services'">Services</a>
+              <a href="#" class="contact" ng-class='active=="contact"? "active" : ""' ng-click="active='contact'">Contact</a>
             </nav>
             <p ng-hide="active">Please click a menu item</p>
             <p ng-show="active">You chose <b>{{active}}</b></p>
@@ -110,7 +110,7 @@
         Demos
       </h3>
       <dl>
-        <dt>Simple angular tests (the site you're viewing)</dt><dd><a href='https://github.com/live-systems/ang/tree/gh-pages'>(source)</a></dd>
+        <dt>Simple angular tests (the site you're viewing) (<a href='http://live-systems.github.io/ang/'>public version</a>)</dt><dd><a href='https://github.com/live-systems/ang/tree/gh-pages'>(source)</a></dd>
         <dt>Angular.js, unit tested & functional tested, with python <a href='http://fractalish.local/'>(local dev)</a></dt><dd><a href='https://github.com/live-systems/fractalish'>(source)</a></dd>
         <dt>Basic Django with functional testing & unit testing with pytest [WIP] <a href='http://127.0.0.1:8000/'>(local dev)</a></dt><dd><a href='https://github.com/live-systems/dj'>(source)</a></dd>
         <dt>Full fledged PHP site with unit, integration, functional, and js testing in Codeship CI <a href='http://www.ninjawars.net'>(ninjawars.net)</a></dt><dd><a href='https://github.com/BitLucid/ninjawars'>(source)</a></dd>
