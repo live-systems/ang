@@ -16,18 +16,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-<style>
-.rainbowized{
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-.invis{
-  visibility:hidden;
-}
-</style>
   </head>
   <body ng-app>
     <section class="page-header">
@@ -77,16 +65,23 @@
             Naive Password Strength Checker [WIP]
           </v-pane-header>
           <v-pane-content>
-            <input name='pzwd' id='pzwd' ng-model=pzwd value=''> <button>Check Password Strength</button>
-            <output name='pzwdstrength'>Weak</output>
+            <input name='pzwd' id='pzwd' ng-model='pzwd' value=''> <button>Check Password Strength</button>
+            <output name='pzwdstrength'>[{{pzwd.length || '0'}}] character password is Weak</output>
           </v-pane-content>
         </v-pane>
         <v-pane id='pane3'>
           <v-pane-header>
-            Another accordion header [WIP]
+            Navigations Active [WIP]
           </v-pane-header>
           <v-pane-content>
-            Another Accordion demo content area
+            <nav class="square {{active}}" ng-click="$event.preventDefault()">
+              <a href="#" class="home" ng-class='active=="home"? "active" : ""' ng-click="active='home'">Home</a>
+              <a href="#" class="projects" ng-class='active=="projects"? "active" : ""'ng-click="active='projects'">Projects</a>
+              <a href="#" class="services" ng-class='active=="services"? "active" : ""'ng-click="active='services'">Services</a>
+              <a href="#" class="contact" ng-class='active=="contact"? "active" : ""'ng-click="active='contact'">Contact</a>
+            </nav>
+            <p ng-hide="active">Please click a menu item</p>
+            <p ng-show="active">You chose <b>{{active}}</b></p>
           </v-pane-content>
         </v-pane>
       </v-accordion>
