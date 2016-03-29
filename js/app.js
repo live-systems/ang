@@ -20,6 +20,7 @@ angular.module('app', [])
         });
     }]
 );
+console.log('angular controllers and directives loaded');
 
 
 // html5 arbitrary tag hack --RR
