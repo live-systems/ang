@@ -42,8 +42,9 @@
                 <div class='calculator'>
                   <output name='o'>Sum: {{ x + y }}</output>
                   <div class='buttons'>
-                  <input name='x' id='x' type=number step=any ng-model=x value=''> + 
-                  <input name='y' id='y' type=number step=any ng-model=y value=''>
+                    <input name='x' id='x' type=number step=any ng-model=x value=''> + 
+                    <input name='y' id='y' type=number step=any ng-model=y value=''>
+                  </div>
                 </div>
               </div>
             </div>
@@ -54,11 +55,10 @@
             Trivial Show/Hide
           </v-pane-header>
           <v-pane-content>
+            <button name='toggle' ng-click='colorizedToggle = !colorizedToggle'>Toggle</button>
             <person class='rainbowized' ng-init="colorizedToggle='true'" ng-class="colorizedToggle? false : 'invis'">
               A rainbowized div to show/hide
             </person>
-
-            <button name='toggle' ng-click='colorizedToggle = !colorizedToggle'>Toggle</button>
           </v-pane-content>
         </v-pane>
         <v-pane id='pane2'>
@@ -106,22 +106,6 @@
       <button ng-click="accordion.collapseAll()">Collapse all</button>
       <p><small>Accordion reimplemented from <a href='http://lukaszwatroba.github.io/v-accordion/'>here</a></small></p>
       -->
-      <div>
-        <h3>
-          Tuts & Resources
-        </h3>
-        <ol>
-          <li><a href='http://tutorialzine.com/2013/08/learn-angularjs-5-examples/'>5 simple examples</a></li>
-          <li><a href='https://scotch.io/tutorials/how-to-use-ngshow-and-nghide'>ng-show and ng-hide</a></li>
-          <li><a href='https://docs.angularjs.org/guide/concepts'>Angular intro from angularjs.org</a></li>
-          <li><a href='https://docs.angularjs.org/misc/started'>Angular getting started</a></li>
-          <li><a href='https://docs.angularjs.org/guide/unit-testing'>Angularjs unit testing</a></li>
-          <li><a href='http://requirejs.org/docs/whyamd.html'>AMD with requirejs</a></li>
-          <li><a href='https://docs.angularjs.org/guide/unit-testing'>Angularjs unit testing</a></li>
-          <li><a href='https://docs.docker.com/linux/step_one/'>Docker setup</a></li>
-          <li><a href='https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-getting-started'>DigitalOcean Docker setup guide</a></li>
-        </ol>
-      </div>
       </div>
     </section>
 
@@ -137,49 +121,71 @@
         <dt>REST API with EVE or Flask</dt><dd><a href='https://github.com/live-systems/ang/tree/gh-pages'><strike>(source)</strike></a></dd>
         <dt>A full stack of Continuous Integration using Travis CI instead of codeship</dt><dd><a href='https://github.com/live-systems/ang/tree/gh-pages'><strike>(source)</strike></a></dd>
       </dl>
-    </section>
 
-    <section class="main-content">
-      <h4>
-<a id="lets-talk" class="anchor" href="#lets-talk" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Let's talk <em class='subtitle'>about what you want from the web</em></h4>
+      <section>
+        <h3>
+          Tuts & Resources
+        </h3>
+        <div class='tuts'>
+          <ol>
+            <li><a href='http://tutorialzine.com/2013/08/learn-angularjs-5-examples/'>5 simple examples</a></li>
+            <li><a href='https://scotch.io/tutorials/how-to-use-ngshow-and-nghide'>ng-show and ng-hide</a></li>
+            <li><a href='https://docs.angularjs.org/guide/concepts'>Angular intro from angularjs.org</a></li>
+            <li><a href='https://docs.angularjs.org/misc/started'>Angular getting started</a></li>
+            <li><a href='https://docs.angularjs.org/guide/unit-testing'>Angularjs unit testing</a></li>
+            <li><a href='http://requirejs.org/docs/whyamd.html'>AMD with requirejs</a></li>
+            <li><a href='https://docs.angularjs.org/guide/unit-testing'>Angularjs unit testing</a></li>
+            <li><a href='https://docs.docker.com/linux/step_one/'>Docker setup</a></li>
+            <li><a href='https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-getting-started'>DigitalOcean Docker setup guide</a></li>
+          </ol>
+        </div>
+      </section>
 
-<p>Complex signup processes turn away customers. Slow loading pages cause users to leave quickly. Security breaches can cost days of downtime and massive liability. It's easy to lose users &amp; sales, but it takes knowledge to keep them. You need an experienced full-stack developer that can address usability, performance, security, and business value all at the same time. The expertise I bring ensures that your site works for your users, instead of being an obstacle.</p>
 
-<p>This is what I do:</p>
 
-<ul>
-<li>Coding in PHP, Python, Javascript</li>
-<li>Quality Assurance and User Acceptance Testing</li>
-<li>Layout Improvement and UX</li>
-<li>Server Dev Ops</li>
-<li>Continuous Integration and Stability Improvement</li>
-</ul>
+      <section class="what-i-do">
+        <h4>
+  <a id="lets-talk" class="anchor" href="#lets-talk" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Let's talk <em class='subtitle'>about what you want from the web</em></h4>
 
-<p>In short, I code strong and stable dynamic websites from the server to database to front-end and beyond.</p>
+  <p>Complex signup processes turn away customers. Slow loading pages cause users to leave quickly. Security breaches can cost days of downtime and massive liability. It's easy to lose users &amp; sales, but it takes knowledge to keep them. You need an experienced full-stack developer that can address usability, performance, security, and business value all at the same time. The expertise I bring ensures that your site works for your users, instead of being an obstacle.</p>
 
-<h3>
-<a id="experience--expertise" class="anchor" href="#experience--expertise" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Experience &amp; Expertise <em class='subtitle'>in web development</em></h3>
+  <p>This is what I do:</p>
 
-<ul>
-<li>Php development for the web since 2003.</li>
-<li>Developed custom php e-commerce and inventory-management systems.</li>
-<li>Worked on social network sites and online small-business niche sites for my clients.</li>
-<li>Overhauled the website <a href='http://www.shermanbrothers.com'>shermanbrothers.com</a>, moved it to new servers, updated it to html5, and cleaned up the codebase.</li>
-</ul>
+  <ul>
+  <li>Coding in PHP, Python, Javascript</li>
+  <li>Quality Assurance and User Acceptance Testing</li>
+  <li>Layout Improvement and UX</li>
+  <li>Server Dev Ops</li>
+  <li>Continuous Integration and Stability Improvement</li>
+  </ul>
 
-<p>I have over a decade's experience in creating clear, flexible, &amp; fast systems coded in PHP and javascript. I work across the full stack, from server deployment to server-side app to front-end, to MAXIMIZE how well your site works. Not just by creating code, but by analyzing and resolving problems that might otherwise turn away users &amp; decrease conversions.</p>
+  <p>In short, I code strong and stable dynamic websites from the server to database to front-end and beyond.</p>
 
-<h3>
-<a id="technologies" class="anchor" href="#technologies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technologies:</h3>
+  <h3>
+  <a id="experience--expertise" class="anchor" href="#experience--expertise" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Experience &amp; Expertise <em class='subtitle'>in web development</em></h3>
 
-<ul>
-<li>I work on open source projects and sites on github.</li>
-<li>I design systems in php, mysql/postgresql, javascript, jquery, html5, and css3.</li>
-<li>I use Test Driven Design via phpunit or behat, and templating engines like Twig and Smarty</li>
-<li>I deploy debian based virtual servers with AWS or Rackspace.</li>
-</ul>
+  <ul>
+  <li>Php development for the web since 2003.</li>
+  <li>Developed custom php e-commerce and inventory-management systems.</li>
+  <li>Worked on social network sites and online small-business niche sites for my clients.</li>
+  <li>Overhauled the website <a href='http://www.shermanbrothers.com'>shermanbrothers.com</a>, moved it to new servers, updated it to html5, and cleaned up the codebase.</li>
+  </ul>
 
-<p>If you have a web problem that you need expertly solved: Let's chat.</p>
+  <p>I have over a decade's experience in creating clear, flexible, &amp; fast systems coded in PHP and javascript. I work across the full stack, from server deployment to server-side app to front-end, to MAXIMIZE how well your site works. Not just by creating code, but by analyzing and resolving problems that might otherwise turn away users &amp; decrease conversions.</p>
+
+  <h3>
+  <a id="technologies" class="anchor" href="#technologies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technologies:</h3>
+
+  <ul>
+  <li>I work on open source projects and sites on github.</li>
+  <li>I design systems in php, mysql/postgresql, javascript, jquery, html5, and css3.</li>
+  <li>I use Test Driven Design via phpunit or behat, and templating engines like Twig and Smarty</li>
+  <li>I deploy debian based virtual servers with AWS or Rackspace.</li>
+  </ul>
+
+  <p>If you have a web problem that you need expertly solved: Let's chat.</p>
+
+      </section>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/live-systems/ang">Ang</a> is maintained by <a href="https://github.com/tchalvak">Roy Ronalds</a>.</span>

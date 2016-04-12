@@ -155,7 +155,7 @@ nav.square a{
     display:inline-block;padding:0.5em 1em;color:white;background-color:lightblue;
 }
 nav.square a.active{
-    background-color:darkblue;
+    background-color:#e35885;
 }
 
 .main-content .subtitle{
